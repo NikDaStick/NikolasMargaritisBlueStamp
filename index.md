@@ -45,6 +45,8 @@ For your first milestone, describe what your project is and how you plan to buil
 # Useless Box
 As my starter project, I created a useless box that flicks a lever off after it is flicked on. This is done by a motor that is attached to an arm in the machine that activates when a lever is flicked on. In addition to this, there is also an LED hooked up to the circuit which turns green when the arm is starting to flick the lever back and turns red after the arm has flicked the lever. While building this machine, I learned how to solder many different components onto a circuit board, some including resistors, LEDs, levers, and pressure switches. However, I encountered a challenge with the self-tapping screws (meaning that the screw creates its own rivets) when the screws kept getting stuck. To combat this challenge I had to come up with my own idea to which I used a wrench as a leveraging tool to help me unscrew the screws that were stuck.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p0D7MX5DmcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 
