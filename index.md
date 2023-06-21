@@ -43,6 +43,7 @@ Included components:
   - Motor
   - Batteries
   - Circuit Board
+
 These components work together by being interconnected by the circuit board. When the lever is switched on, power is sent to the motor a resistor making the motor to move the arm up towards the lever. When the arm starts to move it decreases the pressure applied on the pressure switch causing the switch to turn on and send power through the resistor to the LED, turning it green. Then after the lever is flicked off by the arm, the LED changes color to RED and the motor changes its direction moving the arm down. When the arm comes to a stop, it puts pressure back onto the pressure switch, turning off the LED.
 
 ## Challenges
