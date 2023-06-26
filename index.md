@@ -6,39 +6,69 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 |:--:|:--:|:--:|:--:|
 | Nikolas M | Monta Vista High School | Computer Science | Incoming Senior
 
-```python
-from picamera.array import PiRGBArray
-from picamera import PiCamera
-import time
-import RPi.GPIO as GPIO
-import Motor
-import VehicleMove
+<!--
+**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
-camera = PiCamera()
-vehicle = VehicleMove.VehicleMove()
+![Headstone Image](logo.svg)
+-->
+  
+# Final Milestone
+<!---
+For your final milestone, explain the outcome of your project. Key details to include are:
+- What you've accomplished since your previous milestone
+- What your biggest challenges and triumphs were at BSE
+- A summary of key topics you learned about
+- What you hope to learn in the future after everything you've learned at BSE
+-->
 
-value = "w"
-while (value != "q"):
-    value = input("enter: ")
-    if (value == "w"):
-        vehicle.forward()
-    elif (value == "s"):
-        vehicle.backward()
-    elif (value == "d"):
-        vehicle.rightTurn()
-    elif (value == "a"):
-        vehicle.leftTurn()
-    elif (value == "e"):
-        vehicle.stop()
-    elif (value == "z"):
-        camera.start_preview(alpha=200)
-    elif (value == "x"):
-        camera.stop_preview()
-    else:
-        vehicle.stop()
-        GPIO.cleanup()
-```
+# Second Milestone
+<!--
+For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
+- Technical details of what you've accomplished and how they contribute to the final goal
+- What has been surprising about the project so far
+- Previous challenges you faced that you overcame
+- What needs to be completed before your final milestone 
+-->
 
+<br><br><br>
+# First Milestone
+
+## Summary
+As my first milestone, I created the shell of the robot without the ball tracking component. 
+
+<br>
+<pre>
+Included componenets:
+  - Raspberry Pi
+  - Circuit Board
+  - Ultrasonic Sensors
+  - Camera
+  - Portable Battery
+  - External Batteries
+  - DC Stepper Motor Driver
+  - 2 DC Motors
+  - 2 Wheels
+</pre>
+
+<img src="Milestone1Top.png" width="320"/> <img src="Milestone1Side.png" width="410"/> 
+<img align="right" src="Milestone1Front.png" width="50%"/>
+
+These components work together by being connected through the raspberry pi, circuit board, and dc stepper motor driver. The portable battery provides power to the raspberry pi and the raspberry pi and external batteries provide power to the dc stepper motor driver. The raspberry pi also is connected to the dc stepper motor driver with 4 GPIO pins which can be programmed to make specific motors move. The dc stepper motor driver provides output cables to the two motors. The raspberry pi also provides power through the circuit board to the 3 ultrasonic sensors. In addition to this, 2 GPIO pins from the raspberry pi (in and out) are connected to each ultrasonic sensor to control it. Finally, the camera is connected to the raspberry pi through the camera slot.
+
+<br>
+## Progress
+I was able to get the robot to show video output, sense how far away an object is in centimeters, and move on command from input from a keyboard.
+
+<br>
+## Challenges
+A challenge I faced when creating this robot was learning how to use the RPi.GPIO library correctly to control the motors and sensors. As I created multiple classes for the motors and movement, when I tried to close the motor connection in one of these classes after use, it would always throw an error. The fix to this issue was to always close the connection of the motors in the main class that created objects of the Motor and VehicleMovement classes. 
+
+<br>
+## Next Steps
+My next steps are to implement the ball tracking mechanism of the robot and move towards the ball when it detects one.
+
+<br>
+## Code
 <table>
 <tr>
 <th> Main.py </th>
@@ -84,126 +114,7 @@ while (value != "q"):
 </td>
 <td>
 
-```json
-{
-  "id": 5,
-  "username": "mary",
-  "email": "mary@example.com",
-  "order_id": "f7177da"
-}
-```
-
-</td>
-</tr>
-</table>
-
-<!--
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
-
-![Headstone Image](logo.svg)
--->
-  
-# Final Milestone
-<!---
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
--->
-
-# Second Milestone
-<!--
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
--->
-
-<br><br><br>
-# First Milestone
-
-## Summary
-As my first milestone, I created the shell of the robot without the ball tracking component. 
-
-<br>
-Included componenets:
-  - Raspberry Pi
-  - Circuit Board
-  - Ultrasonic Sensors
-  - Camera
-  - Portable Battery
-  - External Batteries
-  - DC Stepper Motor Driver
-  - 2 DC Motors
-  - 2 Wheels
-
-<img src="Milestone1Top.png" width="320"/> <img src="Milestone1Side.png" width="410"/> 
-<img align="right" src="Milestone1Front.png" width="50%"/>
-
-These components work together by being connected through the raspberry pi, circuit board, and dc stepper motor driver. The portable battery provides power to the raspberry pi and the raspberry pi and external batteries provide power to the dc stepper motor driver. The raspberry pi also is connected to the dc stepper motor driver with 4 GPIO pins which can be programmed to make specific motors move. The dc stepper motor driver provides output cables to the two motors. The raspberry pi also provides power through the circuit board to the 3 ultrasonic sensors. In addition to this, 2 GPIO pins from the raspberry pi (in and out) are connected to each ultrasonic sensor to control it. Finally, the camera is connected to the raspberry pi through the camera slot.
-
-<br>
-## Progress
-I was able to get the robot to show video output, sense how far away an object is in centimeters, and move on command from input from a keyboard.
-
-<br>
-## Challenges
-A challenge I faced when creating this robot was learning how to use the RPi.GPIO library correctly to control the motors and sensors. As I created multiple classes for the motors and movement, when I tried to close the motor connection in one of these classes after use, it would always throw an error. The fix to this issue was to always close the connection of the motors in the main class that created objects of the Motor and VehicleMovement classes. 
-
-<br>
-## Next Steps
-My next steps are to implement the ball tracking mechanism of the robot and move towards the ball when it detects one.
-
-<br>
-## Code
-<table>
-<tr>
-  <th> Main.py </th>
-  <th> VehicleMovement.py </th>
-  <th> Motor.py </th>
-</tr>
-<tr>
-<td>
-
-```python
-from picamera.array import PiRGBArray
-from picamera import PiCamera
-import time
-import RPi.GPIO as GPIO
-import Motor
-import VehicleMove
-
-camera = PiCamera()
-vehicle = VehicleMove.VehicleMove()
-
-value = "w"
-while (value != "q"):
-    value = input("enter: ")
-    if (value == "w"):
-        vehicle.forward()
-    elif (value == "s"):
-        vehicle.backward()
-    elif (value == "d"):
-        vehicle.rightTurn()
-    elif (value == "a"):
-        vehicle.leftTurn()
-    elif (value == "e"):
-        vehicle.stop()
-    elif (value == "z"):
-        camera.start_preview(alpha=200)
-    elif (value == "x"):
-        camera.stop_preview()
-    else:
-        vehicle.stop()
-        GPIO.cleanup()
-```
-
-</td>
-<td>
-
-```python
+<pre>
 import Motor
 class VehicleMove:
     def __init__(self):
@@ -234,12 +145,12 @@ class VehicleMove:
         print("stop")
         self.rightMotor.stop()
         self.leftMotor.stop()
-```
+</pre>
 
 </td>
 <td>
 
-```python
+<pre>
 import RPi.GPIO as GPIO
 class Motor:
     def __init__(self, pinIn, pinOut):
@@ -261,7 +172,7 @@ class Motor:
     def stop(self):
         GPIO.output(self.pinIn, False)
         GPIO.output(self.pinOut, False)
-```
+</pre>
 
 </td>
 </tr>
@@ -285,13 +196,13 @@ As my starter project, I created a useless box that flicks a lever off after it 
 <br>
 <pre>
 Included components:
-  - Lever:             Switch that can turn on and off a circuit
-  - LED:               Light-emmiting diode
-  - Resistor:          Resists the voltage in a circuit
-  - Pressure Switch:   Switch that can be turned on and off through pressure
-  - Motor:             Converts electrical energy passed through the circuit into mechanical energy
-  - Batteries:         Gives power to the circuit
-  - Circuit Board:     Where components are soldered onto to create a circuit
+  - Lever             > Switch that can turn on and off a circuit
+  - LED               > Light-emmiting diode
+  - Resistor          > Resists the voltage in a circuit
+  - Pressure Switch   > Switch that can be turned on and off through pressure
+  - Motor             > Converts electrical energy passed through the circuit into mechanical energy
+  - Batteries         > Gives power to the circuit
+  - Circuit Board     > Where components are soldered onto to create a circuit
 </pre>
 
 <img src="starterProject_front.png" width="425"/> <img src="starterProject_back.png" width="223"/> 
