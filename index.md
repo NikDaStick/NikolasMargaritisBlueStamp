@@ -37,7 +37,7 @@ For your second milestone, explain what you've worked on since your previous mil
 As my first milestone, I created the shell of the robot without the ball tracking component. 
 
 <br>
-<pre style="background:#FFF; border:none">
+<pre style="background:#fdfdfd; border:none">
 Included componenets:
   - Raspberry Pi
   - Circuit Board
@@ -69,7 +69,7 @@ My next steps are to implement the ball tracking mechanism of the robot and move
 
 <br>
 ## Code
-<pre style="background:#FFF; border:none">
+<pre style="background:#fdfdfd; border:none">
 <table>
 <tr>
 <th> Main.py </th>
@@ -79,7 +79,7 @@ My next steps are to implement the ball tracking mechanism of the robot and move
 <tr>
 <td>
 
-<pre>
+<pre style="background:#808080">
 from picamera.array import PiRGBArray
 from picamera import PiCamera
 import time
@@ -115,7 +115,7 @@ while (value != "q"):
 </td>
 <td>
 
-<pre>
+<pre style="background:#808080">
 import Motor
 class VehicleMove:
     def __init__(self):
@@ -151,7 +151,7 @@ class VehicleMove:
 </td>
 <td>
 
-<pre>
+<pre style="background:#808080">
 import RPi.GPIO as GPIO
 class Motor:
     def __init__(self, pinIn, pinOut):
@@ -196,7 +196,7 @@ For your first milestone, describe what your project is and how you plan to buil
 As my starter project, I created a useless box that flicks a lever off after it is flicked on. This is done by a motor that is attached to an arm in the machine that activates when a lever is flicked on. In addition to this, there is also an LED hooked up to the circuit which turns green when the arm is starting to flick the lever back and turns red after the arm has flicked the lever. 
 
 <br>
-<pre style="background:#FFF; border:none">
+<pre style="background:#fdfdfd; border:none">
 Included components:
   - Lever             > Switch that can turn on and off a circuit
   - LED               > Light-emmiting diode
