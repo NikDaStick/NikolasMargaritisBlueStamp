@@ -43,6 +43,7 @@ Included componenets:
   - Ultrasonic Sensors
   - Camera
   - Portable Battery
+  - External Batteries
   - DC Stepper Motor Driver
   - 2 DC Motors
   - 2 Wheels
@@ -58,7 +59,7 @@ I was able to get the robot to show video output, sense how far away an object i
 
 <br>
 ## Challenges
-A challenge I faced when creating this robot was 
+A challenge I faced when creating this robot was learning how to use the RPi.GPIO library correctly to control the motors and sensors. As I created multiple classes for the motors and movement, when I tried to close the motor connection in one of these classes after use, it would always throw an error. The fix to this issue was to always close the connection of the motors in the main class that created objects of the Motor and VehicleMovement classes. 
 
 <br>
 ## Next Steps
