@@ -79,7 +79,7 @@ My next steps are to implement the ball tracking mechanism of the robot and move
 <tr>
 <td style="vertical-align:top">
 
-<pre style="background:#f7f7f7">
+<pre style="background:#f7f7f7; border:none">
 from picamera.array import PiRGBArray
 from picamera import PiCamera
 import time
@@ -115,7 +115,7 @@ while (value != "q"):
 </td>
 <td style="vertical-align:top">
 
-<pre style="background:#f7f7f7">
+<pre style="background:#f7f7f7; border:none">
 import Motor
 class VehicleMove:
     def __init__(self):
@@ -151,7 +151,7 @@ class VehicleMove:
 </td>
 <td style="vertical-align:top">
 
-<pre style="background:#f7f7f7">
+<pre style="background:#f7f7f7; border:none">
 import RPi.GPIO as GPIO
 class Motor:
     def __init__(self, pinIn, pinOut):
