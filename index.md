@@ -67,11 +67,114 @@ My next steps are to implement the ball tracking mechanism of the robot and move
 
 <br>
 ## Code
-| Main.py | VehicleMovement.py | Motor.py |
-|:--:|:--:|:--:|
-| ```python 
-class main:```
-| Monta Vista High School | Computer Science
+<table>
+<tr>
+<th> Main.py </th>
+<th> VehicleMovement.py </th>
+<th> Motor.py </th>
+</tr>
+<tr>
+<td>
+
+```python
+from picamera.array import PiRGBArray
+from picamera import PiCamera
+import time
+import RPi.GPIO as GPIO
+import Motor
+import VehicleMove
+
+camera = PiCamera()
+vehicle = VehicleMove.VehicleMove()
+
+value = "w"
+while (value != "q"):
+    value = input("enter: ")
+    if (value == "w"):
+        vehicle.forward()
+    elif (value == "s"):
+        vehicle.backward()
+    elif (value == "d"):
+        vehicle.rightTurn()
+    elif (value == "a"):
+        vehicle.leftTurn()
+    elif (value == "e"):
+        vehicle.stop()
+    elif (value == "z"):
+        camera.start_preview(alpha=200)
+    elif (value == "x"):
+        camera.stop_preview()
+    else:
+        vehicle.stop()
+        GPIO.cleanup()
+```
+
+</td>
+<td>
+
+```python
+import Motor
+class VehicleMove:
+    def __init__(self):
+        self.rightMotor = Motor.Motor(22, 18)
+        self.leftMotor = Motor.Motor(21, 19)
+        
+    def forward(self):
+        print("forward")
+        self.rightMotor.forward()
+        self.leftMotor.forward()
+        
+    def backward(self):
+        print("backward")
+        self.rightMotor.backward()
+        self.leftMotor.backward()
+        
+    def rightTurn(self):
+        print("rightTurn")
+        self.rightMotor.backward()
+        self.leftMotor.forward()
+        
+    def leftTurn(self):
+        print("leftTurn")
+        self.rightMotor.forward()
+        self.leftMotor.backward()
+
+    def stop(self):
+        print("stop")
+        self.rightMotor.stop()
+        self.leftMotor.stop()
+```
+
+</td>
+<td>
+
+```python
+import RPi.GPIO as GPIO
+class Motor:
+    def __init__(self, pinIn, pinOut):
+        self.pinIn = pinIn
+        self.pinOut = pinOut
+        
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(self.pinIn, GPIO.OUT)
+        GPIO.setup(self.pinOut, GPIO.OUT)
+    
+    def forward(self):
+        GPIO.output(self.pinIn, True)
+        GPIO.output(self.pinOut, False)
+        
+    def backward(self):
+        GPIO.output(self.pinIn, False)
+        GPIO.output(self.pinOut, True)
+        
+    def stop(self):
+        GPIO.output(self.pinIn, False)
+        GPIO.output(self.pinOut, False)
+```
+
+</td>
+</tr>
+</table>
 
 
 <!--
