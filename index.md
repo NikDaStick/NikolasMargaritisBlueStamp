@@ -41,20 +41,45 @@ while (value != "q"):
 
 <table>
 <tr>
-<th>Json 1</th>
-<th>Markdown</th>
+<th> Main.py </th>
+<th> VehicleMovement.py </th>
+<th> Motor.py </th>
 </tr>
 <tr>
 <td>
 
-```json
-{
-  "id": 1,
-  "username": "joe",
-  "email": "joe@example.com",
-  "order_id": "3544fc0"
-}
-```
+<pre>
+from picamera.array import PiRGBArray
+from picamera import PiCamera
+import time
+import RPi.GPIO as GPIO
+import Motor
+import VehicleMove
+
+camera = PiCamera()
+vehicle = VehicleMove.VehicleMove()
+
+value = "w"
+while (value != "q"):
+    value = input("enter: ")
+    if (value == "w"):
+        vehicle.forward()
+    elif (value == "s"):
+        vehicle.backward()
+    elif (value == "d"):
+        vehicle.rightTurn()
+    elif (value == "a"):
+        vehicle.leftTurn()
+    elif (value == "e"):
+        vehicle.stop()
+    elif (value == "z"):
+        camera.start_preview(alpha=200)
+    elif (value == "x"):
+        camera.stop_preview()
+    else:
+        vehicle.stop()
+        GPIO.cleanup()
+</pre>
 
 </td>
 <td>
@@ -258,6 +283,7 @@ For your first milestone, describe what your project is and how you plan to buil
 As my starter project, I created a useless box that flicks a lever off after it is flicked on. This is done by a motor that is attached to an arm in the machine that activates when a lever is flicked on. In addition to this, there is also an LED hooked up to the circuit which turns green when the arm is starting to flick the lever back and turns red after the arm has flicked the lever. 
 
 <br>
+<pre>
 Included components:
   - Lever:             Switch that can turn on and off a circuit
   - LED:               Light-emmiting diode
@@ -266,6 +292,7 @@ Included components:
   - Motor:             Converts electrical energy passed through the circuit into mechanical energy
   - Batteries:         Gives power to the circuit
   - Circuit Board:     Where components are soldered onto to create a circuit
+</pre>
 
 <img src="starterProject_front.png" width="425"/> <img src="starterProject_back.png" width="223"/> 
 
