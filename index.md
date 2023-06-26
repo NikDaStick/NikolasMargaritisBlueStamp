@@ -69,7 +69,7 @@ My next steps are to implement the ball tracking mechanism of the robot and move
 
 <br>
 ## Code
-<div overflow-x: scroll>
+<pre>
 <table>
 <tr>
 <th> Main.py </th>
@@ -178,7 +178,7 @@ class Motor:
 </td>
 </tr>
 </table>
-</div>
+</pre>
 
 
 <!--
