@@ -30,6 +30,7 @@ For your second milestone, explain what you've worked on since your previous mil
 - What needs to be completed before your final milestone 
 -->
 
+<br><br>
 # First Milestone
 
 ## Summary
@@ -50,12 +51,15 @@ Included componenets:
 
 These components work together by being connected through the raspberry pi, circuit board, and dc stepper motor driver. The portable battery provides power to the raspberry pi and the raspberry pi and external batteries provide power to the dc stepper motor driver. The raspberry pi also is connected to the dc stepper motor driver with 4 GPIO pins which can be programmed to make specific motors move. The dc stepper motor driver provides output cables to the two motors. The raspberry pi also provides power through the circuit board to the 3 ultrasonic sensors. In addition to this, 2 GPIO pins from the raspberry pi (in and out) are connected to each ultrasonic sensor to control it. Finally, the camera is connected to the raspberry pi through the camera slot.
 
+<br>
 ## Progress
 I was able to get the robot to show video output, sense how far away an object is in centimeters, and move on command from input from a keyboard.
 
+<br>
 ## Challenges
 A challenge I faced when creating this robot was 
 
+<br>
 ## Next Steps
 My next steps are to implement the ball tracking mechanism of the robot and move towards the ball when it detects one.
 
@@ -67,6 +71,7 @@ For your first milestone, describe what your project is and how you plan to buil
 - What your plan is to complete your project
 -->
 
+<br><br>
 # Starter Project - Useless Box
 
 ## Summary
