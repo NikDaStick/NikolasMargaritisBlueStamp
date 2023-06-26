@@ -39,6 +39,61 @@ while (value != "q"):
         GPIO.cleanup()
 ```
 
+<table>
+<tr>
+<th>Json 1</th>
+<th>Markdown</th>
+</tr>
+<tr>
+<td>
+<pre>
+{
+  "id": 1,
+  "username": "joe",
+  "email": "joe@example.com",
+  "order_id": "3544fc0"
+}
+</pre>
+</td>
+<td>
+
+```python
+from picamera.array import PiRGBArray
+from picamera import PiCamera
+import time
+import RPi.GPIO as GPIO
+import Motor
+import VehicleMove
+
+camera = PiCamera()
+vehicle = VehicleMove.VehicleMove()
+
+value = "w"
+while (value != "q"):
+    value = input("enter: ")
+    if (value == "w"):
+        vehicle.forward()
+    elif (value == "s"):
+        vehicle.backward()
+    elif (value == "d"):
+        vehicle.rightTurn()
+    elif (value == "a"):
+        vehicle.leftTurn()
+    elif (value == "e"):
+        vehicle.stop()
+    elif (value == "z"):
+        camera.start_preview(alpha=200)
+    elif (value == "x"):
+        camera.stop_preview()
+    else:
+        vehicle.stop()
+        GPIO.cleanup()
+```
+
+</td>
+</tr>
+</table>
+
 <!--
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
