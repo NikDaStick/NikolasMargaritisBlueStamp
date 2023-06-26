@@ -31,6 +31,20 @@ For your second milestone, explain what you've worked on since your previous mil
 -->
 
 # First Milestone
+
+## Summary
+As my first milestone, I created the shell of the robot without the ball tracking component. 
+
+Included componenets:
+  - Raspberry Pi
+  - Circuit Board
+  - Ultrasonic Sensors
+  - Camera
+  - Portable Battery
+  - DC Stepper Motor Driver
+  - 2 DC Motors
+  - 2 Wheels
+
 <!--
 For your first milestone, describe what your project is and how you plan to build it. You can include:
 - An explanation about the different components of your project and how they will all integrate together
@@ -45,13 +59,13 @@ For your first milestone, describe what your project is and how you plan to buil
 As my starter project, I created a useless box that flicks a lever off after it is flicked on. This is done by a motor that is attached to an arm in the machine that activates when a lever is flicked on. In addition to this, there is also an LED hooked up to the circuit which turns green when the arm is starting to flick the lever back and turns red after the arm has flicked the lever. 
 
 Included components:
-  - Lever            - Switch that can turn on and off a circuit
-  - LED              - Light-emmiting diode
-  - Resistor         - Resists the voltage in a circuit
-  - Pressure Switch  - Switch that can be turned on and off through pressure
-  - Motor            - Converts electrical energy passed through the circuit into mechanical energy
-  - Batteries        - Gives power to the circuit
-  - Circuit Board    - Where components are soldered onto to create a circuit
+  - Lever             Switch that can turn on and off a circuit
+  - LED               Light-emmiting diode
+  - Resistor          Resists the voltage in a circuit
+  - Pressure Switch   Switch that can be turned on and off through pressure
+  - Motor             Converts electrical energy passed through the circuit into mechanical energy
+  - Batteries         Gives power to the circuit
+  - Circuit Board     Where components are soldered onto to create a circuit
 
 <img src="starterProject_front.png" width="425"/> <img src="starterProject_back.png" width="223"/> 
 
