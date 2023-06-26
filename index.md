@@ -69,6 +69,9 @@ My next steps are to implement the ball tracking mechanism of the robot and move
 
 <br>
 ## Code
+.table-wrapper {
+  overflow-x: scroll;
+}
 <div class="table-wrapper" markdown="block">
 <table>
 <tr>
