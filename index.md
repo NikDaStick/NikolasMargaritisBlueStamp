@@ -46,48 +46,26 @@ while (value != "q"):
 </tr>
 <tr>
 <td>
-<pre>
+
+```json
 {
   "id": 1,
   "username": "joe",
   "email": "joe@example.com",
   "order_id": "3544fc0"
 }
-</pre>
+```
+
 </td>
 <td>
 
 ```json
-from picamera.array import PiRGBArray
-from picamera import PiCamera
-import time
-import RPi.GPIO as GPIO
-import Motor
-import VehicleMove
-
-camera = PiCamera()
-vehicle = VehicleMove.VehicleMove()
-
-value = "w"
-while (value != "q"):
-    value = input("enter: ")
-    if (value == "w"):
-        vehicle.forward()
-    elif (value == "s"):
-        vehicle.backward()
-    elif (value == "d"):
-        vehicle.rightTurn()
-    elif (value == "a"):
-        vehicle.leftTurn()
-    elif (value == "e"):
-        vehicle.stop()
-    elif (value == "z"):
-        camera.start_preview(alpha=200)
-    elif (value == "x"):
-        camera.stop_preview()
-    else:
-        vehicle.stop()
-        GPIO.cleanup()
+{
+  "id": 5,
+  "username": "mary",
+  "email": "mary@example.com",
+  "order_id": "f7177da"
+}
 ```
 
 </td>
