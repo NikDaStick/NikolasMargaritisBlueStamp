@@ -37,7 +37,7 @@ For your second milestone, explain what you've worked on since your previous mil
 As my first milestone, I created the shell of the robot without the ball tracking component. 
 
 <br>
-<pre color:white>
+<pre style="color:#FFF;">
 Included componenets:
   - Raspberry Pi
   - Circuit Board
