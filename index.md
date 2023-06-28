@@ -38,15 +38,16 @@ As my first milestone, I created the shell of the robot without the ball trackin
 
 <pre style="background:#fdfdfd; border:none">
 Included componenets:
-  - Raspberry Pi
-  - Circuit Board
-  - Ultrasonic Sensors
-  - Camera
-  - Portable Battery
-  - External Batteries
-  - DC Stepper Motor Driver
-  - 2 DC Motors
-  - 2 Wheels
+  - Raspberry Pi              > Computer to control camera, motors, and sensors
+  - Circuit Board             > Provide connection to multiple wires 
+  - Ultrasonic Sensors        > Senses how far an object is
+  - Camera                    > Provides video output
+  - Portable Battery          > Gives power to Raspberry Pi
+  - External Batteries        > Gives power to the 2 motors
+  - DC Stepper Motor Driver   > Allows for control of the 2 motors 
+  - 2 DC Motors               > Converts electrical energy passed through the circuit into mechanical energy
+  - 2 Wheels                  > Uses mechanical energy to move the vehicle
+  - Wires                     > Provide connection between all components
 </pre>
 
 <img src="Milestone1Top.png" width="320"/> <img src="Milestone1Side.png" width="410"/> 
