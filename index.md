@@ -32,7 +32,7 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <br><br><br>
 # First Milestone
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XBj6bCdopuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my first milestone, I created the shell of the robot without the ball tracking component. 
 
