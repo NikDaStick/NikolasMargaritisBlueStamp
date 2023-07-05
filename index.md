@@ -191,7 +191,7 @@ For your first milestone, describe what your project is and how you plan to buil
 
 <br><br><br>
 # Starter Project - Useless Box
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p0D7MX5DmcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my starter project, I created a useless box that flicks a lever off after it is flicked on. This is done by a motor that is attached to an arm in the machine that activates when a lever is flicked on. In addition to this, there is also an LED hooked up to the circuit which turns green when the arm is starting to flick the lever back and turns red after the arm has flicked the lever. 
 
@@ -217,8 +217,6 @@ I encountered a challenge with the self-tapping screws (meaning that the screw c
 <br>
 ## Next Steps
 My next steps are to start work on my intensive project which is a ball tracking robot. I plan to start this project and apply the knowledge of soldering I learnt from the starter project to the ball tracking robot.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p0D7MX5DmcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br><br><br>
 # Schematics 
