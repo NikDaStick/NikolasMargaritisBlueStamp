@@ -52,7 +52,7 @@ A challenge I faced when creating this robot was learning how to use the RPi.GPI
 
 <br>
 ## Next Steps
-My next steps are to implement the ball tracking mechanism of the robot and move towards the ball when it detects one.
+My next steps are to implement modifications to the robot such as adding an LCD screen to display how far the ball is.
 
 <br>
 ## Code
@@ -70,24 +70,14 @@ start_time_prog = time.time()
 
 # Set GPIO channels
 GPIO.setmode(GPIO.BOARD)
-# Motor A
 GPIO.setup(24, GPIO.OUT) #PWMA
-#GPIO.setup(22, GPIO.OUT) #AI1
-#GPIO.setup(18, GPIO.OUT) #AI2
-# Motor B
 GPIO.setup(26, GPIO.OUT) #PWMB
-##GPIO.setup(21, GPIO.OUT) #BI1
-GPIO.setup(19, GPIO.OUT) #BI2
 
 # Motor initialization
 left = GPIO.PWM(24, 100)
 left.start(50)
 right = GPIO.PWM(26, 100)
 right.start(50)
-#GPIO.output(22, 0) # Set AI1 to low
-#GPIO.output(18, 0) # Set AI2 to low
-#GPIO.output(21, 0) # Set BI1 to low
-#GPIO.output(19, 0) # Set BI2 to low
 
 # Robot mode variables
 # 0 = stop, 1 = ball tracking, 2 = manual forward, 3 = manual backward
