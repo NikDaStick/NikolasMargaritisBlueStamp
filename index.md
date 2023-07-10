@@ -56,7 +56,7 @@ My next steps are to implement modifications to the robot such as adding an LCD 
 
 <br>
 ## Code
-<pre style="height:100">
+<pre style="height:10pc">
 ```python
 import RPi.GPIO as GPIO
 import time
