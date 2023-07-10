@@ -59,8 +59,7 @@ My next steps are to implement modifications to the robot such as adding an LCD 
 
 <br>
 ## Code
-<pre style="background:#f7f7f7; border:none; height:30pc">
-```python
+<pre style="background:#fdfdfd; border:none; height:50pc">
 import RPi.GPIO as GPIO
 import time
 import subprocess
@@ -300,7 +299,6 @@ stop()
 GPIO.cleanup()
 cap.release()
 cv2.destroyAllWindows()
-```
 </pre>
 
 <br><br><br>
@@ -342,7 +340,7 @@ My next steps are to implement the ball tracking mechanism of the robot and move
 
 <br>
 ## Code
-<pre style="background:#fdfdfd; border:none; height:30pc">
+<pre style="background:#fdfdfd; border:none; height:50pc">
 <table>
 <tr>
 <th> Main.py </th>
