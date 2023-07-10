@@ -56,7 +56,7 @@ My next steps are to implement modifications to the robot such as adding an LCD 
 
 <br>
 ## Code
-<pre style="height:10pc">
+<pre style="background:#f7f7f7; border:none; height:30pc">
 ```python
 import RPi.GPIO as GPIO
 import time
@@ -339,7 +339,7 @@ My next steps are to implement the ball tracking mechanism of the robot and move
 
 <br>
 ## Code
-<pre style="background:#fdfdfd; border:none">
+<pre style="background:#fdfdfd; border:none; height:30pc">
 <table>
 <tr>
 <th> Main.py </th>
