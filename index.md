@@ -40,6 +40,8 @@ Included componenets:
   - Resistors                 > Resists the electrical current
 </pre>
 
+<img src="Milestone2Front.png" width="40%"/> <img src="Milestone2Side.png" width="40%"/> 
+
 In my second milestone, I added a voltage divider for each of the ultrasonic sensors in order to send only 3.3 volts back to the raspberry pi GPIO pin from the echo pin on the sensor. I did this by 
 
 <br>
