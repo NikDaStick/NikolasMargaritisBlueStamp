@@ -40,7 +40,7 @@ Included componenets:
   - Resistors                 > Resists the electrical current
 </pre>
 
-<img src="Milestone2Front.png" width="50%"/> <img src="Milestone2Side.png" width="50%"/> 
+<img src="Milestone2Front.png" width="45%"/> <img src="Milestone2Side.png" width="45%"/> 
 
 In my second milestone, I added a voltage divider for each of the ultrasonic sensors in order to send only 3.3 volts back to the raspberry pi GPIO pin from the echo pin on the sensor. In my voltage divider I used two resistors, a 1k Ohm resistor above the output wire and a 2k Ohm resistor below the output wire. The 2k Ohm resistor below the wire is connected to ground and the echo pin provides current to the 1k Ohm resistor, thus creating the circuit.
 
@@ -59,7 +59,7 @@ My next steps are to implement modifications to the robot such as adding an LCD 
 
 <br>
 ## Code
-<pre style="background:#fdfdfd; border:none; height:50pc">
+<pre style="background:#fdfdfd; border:none; height:40pc">
 import RPi.GPIO as GPIO
 import time
 import subprocess
@@ -340,7 +340,7 @@ My next steps are to implement the ball tracking mechanism of the robot and move
 
 <br>
 ## Code
-<pre style="background:#fdfdfd; border:none; height:50pc">
+<pre style="background:#fdfdfd; border:none; height:40pc">
 <table>
 <tr>
 <th> Main.py </th>
