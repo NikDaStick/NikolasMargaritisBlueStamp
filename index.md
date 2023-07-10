@@ -46,7 +46,7 @@ In my second milestone, I added a voltage divider for each of the ultrasonic sen
 
 <br>
 ## Progress
-<img align="center" src="BallTrackingImg.png" width="80%"/> 
+<img align="center" src="BallTrackingImg.png"/> 
 I was able to get the robot to track the ball by creating a mask that filtered all the ball colors to white and everything else to black. Then using the openCV HoughCircles() function, I was able to search for circles in the mask and move the vehicle towards the ball.
 
 <br>
