@@ -44,11 +44,11 @@ In my second milestone, I added a voltage divider for each of the ultrasonic sen
 
 <br>
 ## Progress
-I was able to get the robot to show video output, sense how far away an object is in centimeters, and move on command from input from a keyboard.
+I was able to get the robot to track the ball by creating a mask that filtered all the ball colors to white and everything else to black. Then using the openCV HoughCircles() function, I was able to search for circles in the mask and move the vehicle towards the ball.
 
 <br>
 ## Challenges
-A challenge I faced when creating this robot was learning how to use the RPi.GPIO library correctly to control the motors and sensors. As I created multiple classes for the motors and movement, when I tried to close the motor connection in one of these classes after use, it would always throw an error. The fix to this issue was to always close the connection of the motors in the main class that created objects of the Motor and VehicleMovement classes. 
+A challenge I faced when creating this robot was my raspberry pi short circuiting when using my ultrasonic sensors. My raspberry pi short circuited because the echo pin on the ultrasonic sensor was sending back 5 volts to the raspberry pi's GPIO pin when the GPIO pin only took 3.3 volts. My solution to this challenge was to implement a voltage divider than limited the voltage sent back from the echo pin to 3.3 volts by using resistors and a bread board.
 
 <br>
 ## Next Steps
@@ -56,6 +56,7 @@ My next steps are to implement modifications to the robot such as adding an LCD 
 
 <br>
 ## Code
+<pre style="height:100">
 ```python
 import RPi.GPIO as GPIO
 import time
@@ -297,6 +298,7 @@ GPIO.cleanup()
 cap.release()
 cv2.destroyAllWindows()
 ```
+</pre>
 
 <br><br><br>
 # First Milestone
