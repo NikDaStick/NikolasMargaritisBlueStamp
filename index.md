@@ -8,18 +8,248 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 
 <!--
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
-
-![Headstone Image](logo.svg)
 -->
+![Headstone Image](Nikolas-Headshot.png)
+
   
 # Final Milestone
-<!---
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
--->
+## Summary
+As my second milestone, I coded the ball tracking component of the robot.
+
+<pre style="background:#fdfdfd; border:none">
+Included componenets:
+  - Raspberry Pi              > Computer to control camera, motors, and sensors
+  - Bread Board               > Provide connection to multiple wires 
+  - Ultrasonic Sensors        > Senses how far an object is
+  - Camera                    > Provides video output
+  - Portable Battery          > Gives power to Raspberry Pi
+  - External Battery          > Gives power to the 2 motors
+  - DC Stepper Motor Driver   > Allows for control of the 2 motors 
+  - 2 DC Motors               > Converts electrical energy passed through the circuit into mechanical energy
+  - 2 Wheels                  > Uses mechanical energy to move the vehicle
+  - Wires                     > Provide connection between all components
+  - Resistors                 > Resists the electrical current
+</pre>
+
+<img src="Milestone2Front.png" width="45%"/> <img src="Milestone2Side.png" width="45%"/> 
+
+In my second milestone, I added a voltage divider for each of the ultrasonic sensors in order to send only 3.3 volts back to the raspberry pi GPIO pin from the echo pin on the sensor. In my voltage divider I used two resistors, a 1k Ohm resistor above the output wire and a 2k Ohm resistor below the output wire. The 2k Ohm resistor below the wire is connected to ground and the echo pin provides current to the 1k Ohm resistor, thus creating the circuit.
+
+<br>
+## Progress
+<img align="center" src="BallTrackingImg.png"/> 
+I was able to get the robot to track the ball by creating a mask that filtered all the ball colors to white and everything else to black. Then using the openCV HoughCircles() function, I was able to search for circles in the mask and move the vehicle towards the ball.
+
+<br>
+## Challenges
+A challenge I faced when creating this robot was my raspberry pi short circuiting when using my ultrasonic sensors. My raspberry pi short circuited because the echo pin on the ultrasonic sensor was sending back 5 volts to the raspberry pi's GPIO pin when the GPIO pin only took 3.3 volts. My solution to this challenge was to implement a voltage divider than limited the voltage sent back from the echo pin to 3.3 volts by using resistors and a bread board.
+
+<br>
+## Next Steps
+My next steps are to implement modifications to the robot such as adding an LCD screen to display how far the ball is.
+
+<br>
+## Code
+<pre style="background:#fdfdfd; border:none; height:40pc">
+# import the necessary packages
+from picamera.array import PiRGBArray     #As there is a resolution problem in raspberry pi, will not be able to capture frames by VideoCapture
+from picamera import PiCamera
+import RPi.GPIO as GPIO
+import time
+import cv2
+import numpy as np
+import VehicleMove
+import Sensor
+
+from luma.core.interface.serial import spi, noop
+from luma.core.render import canvas
+from luma.core.virtual import viewport
+from luma.led_matrix.device import max7219
+from luma.core.legacy import text, show_message
+from luma.core.legacy.font import proportional, CP437_FONT, LCD_FONT
+
+#Constants
+FOCAL = 220 # camera focal length
+WIDTH_BALL = 5.5 # width of ball
+
+#hardware work
+GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
+
+#Sensor initialization
+leftSensor = Sensor.Sensor(40, 33)
+centerSensor = Sensor.Sensor(38, 31)
+rightSensor = Sensor.Sensor(36, 29)
+
+#Motor initialization
+vehicle = VehicleMove.VehicleMove()
+GPIO.setup(26, GPIO.OUT) #PWMA
+GPIO.setup(22, GPIO.OUT) #PWMB
+left = GPIO.PWM(26, 100)
+left.start(50)
+left.ChangeDutyCycle(25)
+right = GPIO.PWM(22, 100)
+right.start(50)
+right.ChangeDutyCycle(50)
+
+#LED matrix initialization
+serial = spi(port=0, device=0, gpio=noop())
+device = max7219(serial, width=16, height=8, block_orientation=-90)
+device.contrast(40)
+virtual = viewport(device, width=32, height=16)
+     
+#Image analysis work
+def segment_colour(frame):    #returns only the red colors in the frame
+    hsv_roi =  cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    mask_1 = cv2.inRange(hsv_roi, np.array([160, 160,10]), np.array([190,255,255]))
+    ycr_roi=cv2.cvtColor(frame,cv2.COLOR_BGR2YCrCb)
+    mask_2=cv2.inRange(ycr_roi, np.array((0.,165.,0.)), np.array((255.,255.,255.)))
+
+    mask = mask_1 | mask_2
+    kern_dilate = np.ones((8,8),np.uint8)
+    kern_erode  = np.ones((3,3),np.uint8)
+    mask= cv2.erode(mask,kern_erode)      #Eroding
+    mask=cv2.dilate(mask,kern_dilate)     #Dilating
+    cv2.imshow('mask',mask)
+    return mask
+
+def find_blob(blob): #returns the red colored circle
+    largest_contour=0
+    cont_index=0
+    contours, hierarchy = cv2.findContours(blob, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
+    for idx, contour in enumerate(contours):
+        area=cv2.contourArea(contour)
+        if (area >largest_contour) :
+            largest_contour=area
+           
+            cont_index=idx
+            #if res>15 and res<18:
+            #    cont_index=idx
+                              
+    r=(0,0,2,2)
+    if len(contours) > 0:
+        r = cv2.boundingRect(contours[cont_index])
+       
+    return r,largest_contour
+
+def target_hist(frame):
+    hsv_img=cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+   
+    hist=cv2.calcHist([hsv_img],[0],None,[50],[0,255])
+    return hist
+    
+def draw(distance):
+    #print("Distance:", round(distance))
+    with canvas(device) as draw:
+        if (distance == 0):
+            device.clear()
+        else:
+            if distance < 10:
+                text(draw, (1, 1), str(round(distance)), fill="white")
+            else:
+                text(draw, (1, 1), str(round(distance) / 10), fill="white")
+                text(draw, (9, 1), str(round(distance) % 10), fill="white")
+
+# Take input from webcam
+cap = cv2.VideoCapture(0) # 640x480
+
+# Reduce the size of video to 320x240 so rpi can process faster
+cap.set(3,320)
+cap.set(4,240)
+ 
+# allow the camera to warmup
+time.sleep(0.001)
+ 
+# capture frames from the camera
+while True:
+      _, frame = cap.read() # Read image frames from live video feed
+      frame=cv2.flip(frame,1)
+      global centre_x
+      global centre_y
+      centre_x=0.
+      centre_y=0.
+      hsv1 = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+      mask_red=segment_colour(frame)      #masking red the frame
+      loct,area=find_blob(mask_red)
+      global x,y,w,h
+      x,y,w,h=loct
+     
+      #distance coming from front ultrasonic sensor
+      distanceC = centerSensor.distance()
+      #distance coming from right ultrasonic sensor
+      distanceR = rightSensor.distance()
+      #distance coming from left ultrasonic sensor
+      distanceL = leftSensor.distance()
+             
+      if (w*h) < 500:
+            found=0
+      else:
+            found=1
+            simg2 = cv2.rectangle(frame, (x,y), (x+w,y+h), 255,2)
+            centre_x=x+((w)/2)
+            centre_y=y+((h)/2)
+            cv2.circle(frame,(int(centre_x),int(centre_y)),3,(0,110,255),-1)
+            centre_x-=80
+            centre_y=6--centre_y
+            print(centre_x,centre_y)
+      flag=0        
+      if(found==0):
+            #if the ball is not found and the last time it sees ball in which direction, it will start to rotate in that direction
+            if flag==0:
+                  vehicle.rightTurn()
+                  time.sleep(0.1)
+            else:
+                  vehicle.leftTurn()
+                  time.sleep(0.1)
+            vehicle.stop()
+            time.sleep(0.0125)
+     
+      elif(found==1):
+            threshold=20000
+            if(area < threshold):
+                  if(distanceC > 3 and distanceR > 3 and distanceL > 3):
+                        #it brings coordinates of ball to center of camera's imaginary axis.
+                        if(centre_x<=20 or centre_x>=130):
+                              if(centre_x<20):
+                                    flag=0
+                                    vehicle.rightTurn()
+                                    if (centre_x < -10):
+                                          time.sleep(0.1)
+                                    time.sleep(0.05)
+                                    vehicle.stop()
+                                    time.sleep(0.01)
+                              elif(centre_x>130):
+                                    flag=1
+                                    vehicle.leftTurn()
+                                    if (centre_x > 160):
+                                          time.sleep(0.1)
+                                    time.sleep(0.05)
+                                    vehicle.stop()
+                                    time.sleep(0.01)
+                        else:
+                              vehicle.forward()
+                              time.sleep(0.1)
+                        time.sleep(0.01)
+                  else:
+                        vehicle.stop()
+                        time.sleep(0.01)
+
+            else:
+                  vehicle.backward()
+                  time.sleep(0.1)
+      cv2.imshow("draw",frame)  
+      
+      distance = min(min(distanceC, distanceL), distanceR)
+      if (found == 0):
+            distance = 0
+      draw(distance)  
+      
+      time.sleep(0.1)
+      if(cv2.waitKey(1) & 0xff == ord('q')):
+            break
+
+GPIO.cleanup() #free all the GPIO pins
+</pre>
 
 # Second Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ot4ZATjNglQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
