@@ -33,13 +33,14 @@ Included componenets:
   - On/Off Switch             > Allows/stops electrical current when pushed on/off respectively
 </pre>
 
-<img src="Milestone2Front.png" width="45%"/> <img src="Milestone2Side.png" width="45%"/> 
+<img align="left" src="FinalMilestoneFront.png" width="50%"/> 
+<img align="right" src="FinalMilestoneSide.png" width="50%"/> <img align="right" src="FinalMilestoneTop.png" width="50%"/> 
 
 In my second milestone, I soldered all of the components to the circuit board. On one of the sides on the circuit board, there was 5 volts of current from the raspberry pi to power the ultrasonic sensors and LED matrix. On the other side of the circuit board, there was 9 volts of current from the battery pack with a on/off switch which turned the current on and off. The motor driver was connected to this 9 volts of current as well as the ground to power the two motors. Finally, the ultrasonic sensors, LED matrix, and motors were controlled through the GPIO pins on the raspberry pi.
 
 <br>
 ## Progress
-<img align="center" src="BallTrackingImg.png"/>
+<img align="center" src="LED-matrix.png"/>
 My customization during this milestone was adding the on/off switch for the motors and the LED matrix to display the distance that the camera detects from the ball. I also 3D printed a raspberry pi camera case where the angle is able to be adjusted to point correctly towards the ball.
 
 
