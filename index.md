@@ -33,8 +33,7 @@ Included componenets:
   - On/Off Switch             > Allows/stops electrical current when pushed on/off respectively
 </pre>
 
-<img align="left" src="FinalMilestoneFront.png" width="50%"/> 
-<img align="right" src="FinalMilestoneSide.png" width="50%"/> <img align="right" src="FinalMilestoneTop.png" width="50%"/> 
+<img align="center" src="FinalMilestone.png"/>
 
 In my second milestone, I soldered all of the components to the circuit board. On one of the sides on the circuit board, there was 5 volts of current from the raspberry pi to power the ultrasonic sensors and LED matrix. On the other side of the circuit board, there was 9 volts of current from the battery pack with a on/off switch which turned the current on and off. The motor driver was connected to this 9 volts of current as well as the ground to power the two motors. Finally, the ultrasonic sensors, LED matrix, and motors were controlled through the GPIO pins on the raspberry pi.
 
