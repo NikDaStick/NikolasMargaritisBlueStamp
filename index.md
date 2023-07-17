@@ -14,7 +14,7 @@ Replace this text with a brief description (2-3 sentences) of your project. This
   
 # Final Milestone
 ## Summary
-As my second milestone, I coded the ball tracking component of the robot.
+As my second milestone, I added an on/off switch to turn on and off my motors and an LED matrix to display the distance in centimeters that the vehicle detects the ball.
 
 <pre style="background:#fdfdfd; border:none">
 Included componenets:
@@ -29,24 +29,25 @@ Included componenets:
   - 2 Wheels                  > Uses mechanical energy to move the vehicle
   - Wires                     > Provide connection between all components
   - Resistors                 > Resists the electrical current
+  - LED Matrix                > A grid of LEDs where each LED can be programmed
+  - On/Off Switch             > Allows/stops electrical current when pushed on/off respectively
 </pre>
 
 <img src="Milestone2Front.png" width="45%"/> <img src="Milestone2Side.png" width="45%"/> 
 
-In my second milestone, I added a voltage divider for each of the ultrasonic sensors in order to send only 3.3 volts back to the raspberry pi GPIO pin from the echo pin on the sensor. In my voltage divider I used two resistors, a 1k Ohm resistor above the output wire and a 2k Ohm resistor below the output wire. The 2k Ohm resistor below the wire is connected to ground and the echo pin provides current to the 1k Ohm resistor, thus creating the circuit.
+In my second milestone, I soldered all of the components to the circuit board. On one of the sides on the circuit board, there was 5 volts of current from the raspberry pi to power the ultrasonic sensors and LED matrix. On the other side of the circuit board, there was 9 volts of current from the battery pack with a on/off switch which turned the current on and off. The motor driver was connected to this 9 volts of current as well as the ground to power the two motors. Finally, the ultrasonic sensors, LED matrix, and motors were controlled through the GPIO pins on the raspberry pi.
 
 <br>
 ## Progress
-<img align="center" src="BallTrackingImg.png"/> 
-I was able to get the robot to track the ball by creating a mask that filtered all the ball colors to white and everything else to black. Then using the openCV HoughCircles() function, I was able to search for circles in the mask and move the vehicle towards the ball.
+<img align="center" src="BallTrackingImg.png"/>
+My customization during this milestone was adding the on/off switch for the motors and the LED matrix to display the distance that the camera detects from the ball. I also 3D printed a raspberry pi camera case where the angle is able to be adjusted to point correctly towards the ball.
+
 
 <br>
 ## Challenges
-A challenge I faced when creating this robot was my raspberry pi short circuiting when using my ultrasonic sensors. My raspberry pi short circuited because the echo pin on the ultrasonic sensor was sending back 5 volts to the raspberry pi's GPIO pin when the GPIO pin only took 3.3 volts. My solution to this challenge was to implement a voltage divider than limited the voltage sent back from the echo pin to 3.3 volts by using resistors and a bread board.
-
-<br>
-## Next Steps
-My next steps are to implement modifications to the robot such as adding an LCD screen to display how far the ball is.
+A challenge I faced when creating this robot was getting a component to display the distance that the camera detected the ball, whether it was an lcd screen, oled screen, or LED matrix. At first I tried to get the lcd and oled screen to work, however, I was unable to detect the address of each of the screens through the I2C connection in order to control it. In the end I wasn't able to figure out why the raspberry pi could not detect the components so I decided to use an SPI connection with an LED matrix to display the distance. To control the LED matrix, I used the luma library which was able to draw numbers and text by turning on individual LEDs.
+<br><br>
+Another challenge I came across was accidentally soldering the resistors and wires 1 pin apart from each other so there was no connection between them for current to flow through. This resulted in one of the ultrasonic sensors not working. I was able to fix this issue by putting a very small wire between the two connections and soldering both sides on to each of the contact points. 
 
 <br>
 ## Code
