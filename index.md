@@ -14,7 +14,7 @@ Replace this text with a brief description (2-3 sentences) of your project. This
   
 # Final Milestone
 ## Summary
-As my second milestone, I added an on/off switch to turn on and off my motors and an LED matrix to display the distance in centimeters that the vehicle detects the ball.
+As my final milestone, I added an on/off switch to turn on and off my motors and an LED matrix to display the distance in centimeters that the vehicle detects the ball.
 
 <pre style="background:#fdfdfd; border:none">
 Included componenets:
@@ -35,7 +35,7 @@ Included componenets:
 
 <img align="center" src="FinalMilestone.png"/>
 
-In my second milestone, I soldered all of the components to the circuit board. On one of the sides on the circuit board, there was 5 volts of current from the raspberry pi to power the ultrasonic sensors and LED matrix. On the other side of the circuit board, there was 9 volts of current from the battery pack with a on/off switch which turned the current on and off. The motor driver was connected to this 9 volts of current as well as the ground to power the two motors. Finally, the ultrasonic sensors, LED matrix, and motors were controlled through the GPIO pins on the raspberry pi.
+In my final milestone, I soldered all of the components to the circuit board. On one of the sides on the circuit board, there was 5 volts of current from the raspberry pi to power the ultrasonic sensors and LED matrix. On the other side of the circuit board, there was 9 volts of current from the battery pack with a on/off switch which turned the current on and off. The motor driver was connected to this 9 volts of current as well as the ground to power the two motors. Finally, the ultrasonic sensors, LED matrix, and motors were controlled through the GPIO pins on the raspberry pi.
 
 <br>
 ## Progress
