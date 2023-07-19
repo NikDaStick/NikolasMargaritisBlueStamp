@@ -2,8 +2,6 @@
 Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
 -->
 
-<video align = "center" src="DemoVideo.mp4" controls="controls" muted="muted" width="99%"></video>
-
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Nikolas M | Monta Vista High School | Computer Science | Incoming Senior
@@ -12,6 +10,7 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 -->
 <img align="center" src="Nikolas-Headshot.png" width="99%"/> 
+<video align = "center" src="DemoVideo.mp4" controls="controls" muted="muted" width="99%"></video>
 
   
 # Final Milestone
