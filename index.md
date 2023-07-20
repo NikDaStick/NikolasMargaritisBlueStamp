@@ -9,8 +9,8 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 <!--
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 -->
-<img align="left" src="Nikolas-Headshot.png" width="49%"/> 
-<img align="right" src="Nikolas-Project.png" width="49%"/> 
+<img align="left" src="Nikolas-Headshot.png" width="50%"/> 
+<img align="right" src="Nikolas-Project.png" width="50%"/> 
 
 <br><br><br>
 # Demo Video
