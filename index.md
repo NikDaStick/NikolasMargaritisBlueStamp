@@ -1044,6 +1044,7 @@ GPIO.cleanup() #free all the GPIO pins
 
 <br><br><br>
 # Bill of Materials
+
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | Vehicle Chassis | Contains all of the components | $13.59 | <a href="https://www.amazon.com/Smart-Chassis-Motors-Encoder-Battery/dp/B01LXY7CM3/ref=sr_1_3?crid=2PBUMRA558E78&keywords=motor+robot+car+kit&qid=1689879344&sprefix=motor+robot+car+kit%2Caps%2C183&sr=8-3"> Link </a> |
