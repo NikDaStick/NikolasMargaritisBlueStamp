@@ -12,6 +12,7 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 <img align="left" src="Nikolas-Headshot.png" width="49%"/> 
 <img align="right" src="Nikolas-Project.png" width="49%"/> 
 
+<br>
 # Demo Video
 <video align = "center" src="DemoVideo.mp4" controls muted width="99%"></video>
 <br>
@@ -257,6 +258,7 @@ while True:
 GPIO.cleanup() #free all the GPIO pins
 </pre>
 
+<br><br><br>
 # Second Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ot4ZATjNglQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
@@ -730,23 +732,320 @@ My next steps are to start work on my intensive project which is a ball tracking
 # Schematics 
 <img align="center" src="CircuitDiagram.png" width="99%"/>
 
-# Code
-<!--
-Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
+<br><br><br>
+# Full Code
+<pre style="background:#fdfdfd; border:none; height:40pc">
+<table>
+<tr>
+<th> BallTracking.py </th>
+<th> VehicleMovement.py </th>
+<th> Motor.py </th>
+<th> Sensor.py </th>
+</tr>
+<tr>
+<td style="vertical-align:top">
 
-```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
-}
+<pre style="background:#f7f7f7; border:none">
+# import the necessary packages
+import RPi.GPIO as GPIO
+import time
+import cv2
+import numpy as np
+import VehicleMove
+import Sensor
 
-void loop() {
-  // put your main code here, to run repeatedly:
+from luma.core.interface.serial import spi, noop
+from luma.core.render import canvas
+from luma.core.virtual import viewport
+from luma.led_matrix.device import max7219
+from luma.core.legacy import text, show_message
+from luma.core.legacy.font import proportional, CP437_FONT, LCD_FONT
 
-}
-```
--->
+#Constants
+FOCAL = 220 # camera focal length
+WIDTH_BALL = 5.5 # width of ball
+
+#hardware work
+GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
+
+#Sensor initialization
+leftSensor = Sensor.Sensor(40, 33)
+centerSensor = Sensor.Sensor(38, 31)
+rightSensor = Sensor.Sensor(36, 29)
+
+#Motor initialization
+vehicle = VehicleMove.VehicleMove()
+GPIO.setup(26, GPIO.OUT) #PWMA
+GPIO.setup(22, GPIO.OUT) #PWMB
+left = GPIO.PWM(26, 100)
+left.start(50)
+left.ChangeDutyCycle(25)
+right = GPIO.PWM(22, 100)
+right.start(50)
+right.ChangeDutyCycle(70)
+
+#LED matrix initialization
+serial = spi(port=0, device=0, gpio=noop())
+device = max7219(serial, width=16, height=8, block_orientation=-90)
+device.contrast(40)
+virtual = viewport(device, width=32, height=16)
+     
+#Image analysis work
+def segment_colour(frame):    #returns only the red colors in the frame
+    hsv_roi =  cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    mask_1 = cv2.inRange(hsv_roi, np.array([160, 160,10]), np.array([190,255,255]))
+    ycr_roi=cv2.cvtColor(frame,cv2.COLOR_BGR2YCrCb)
+    mask_2=cv2.inRange(ycr_roi, np.array((0.,165.,0.)), np.array((255.,255.,255.)))
+
+    mask = mask_1 | mask_2
+    kern_dilate = np.ones((8,8),np.uint8)
+    kern_erode  = np.ones((3,3),np.uint8)
+    mask= cv2.erode(mask,kern_erode)      #Eroding
+    mask=cv2.dilate(mask,kern_dilate)     #Dilating
+    cv2.imshow('mask',mask)
+    return mask
+
+def find_blob(blob): #returns the red colored circle
+    largest_contour=0
+    cont_index=0
+    contours, hierarchy = cv2.findContours(blob, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
+    for idx, contour in enumerate(contours):
+        area=cv2.contourArea(contour)
+        if (area >largest_contour) :
+            largest_contour=area
+           
+            cont_index=idx
+            #if res>15 and res<18:
+            #    cont_index=idx
+                              
+    r=(0,0,2,2)
+    if len(contours) > 0:
+        r = cv2.boundingRect(contours[cont_index])
+       
+    return r,largest_contour
+
+def target_hist(frame):
+    hsv_img=cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+   
+    hist=cv2.calcHist([hsv_img],[0],None,[50],[0,255])
+    return hist
+    
+def draw(distance):
+    #print("Distance:", round(distance))
+    with canvas(device) as draw:
+        if (distance == 0):
+            device.clear()
+        else:
+            if distance < 10:
+                text(draw, (1, 1), str(round(distance)), fill="white")
+            else:
+                text(draw, (1, 1), str(round(distance) / 10), fill="white")
+                text(draw, (9, 1), str(round(distance) % 10), fill="white")
+
+# Take input from webcam
+cap = cv2.VideoCapture(0) # 640x480
+
+# Reduce the size of video to 320x240 so rpi can process faster
+cap.set(3,320)
+cap.set(4,240)
+ 
+# allow the camera to warmup
+time.sleep(0.001)
+ 
+# capture frames from the camera
+while True:
+      _, frame = cap.read() # Read image frames from live video feed
+      frame=cv2.flip(frame,1)
+      global centre_x
+      global centre_y
+      centre_x=0.
+      centre_y=0.
+      hsv1 = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+      mask_red=segment_colour(frame)      #masking red the frame
+      loct,area=find_blob(mask_red)
+      global x,y,w,h
+      x,y,w,h=loct
+     
+      #distance coming from front ultrasonic sensor
+      distanceC = centerSensor.distance()
+      #distance coming from right ultrasonic sensor
+      distanceR = rightSensor.distance()
+      #distance coming from left ultrasonic sensor
+      distanceL = leftSensor.distance()
+             
+      if (w*h) < 500:
+            found=0
+      else:
+            found=1
+            simg2 = cv2.rectangle(frame, (x,y), (x+w,y+h), 255,2)
+            centre_x=x+((w)/2)
+            centre_y=y+((h)/2)
+            cv2.circle(frame,(int(centre_x),int(centre_y)),3,(0,110,255),-1)
+            centre_x-=80
+            centre_y=6--centre_y
+            print(centre_x,centre_y)
+      flag=0        
+      if(found==0):
+            #if the ball is not found and the last time it sees ball in which direction, it will start to rotate in that direction
+            if flag==0:
+                  vehicle.rightTurn()
+                  time.sleep(0.1)
+            else:
+                  vehicle.leftTurn()
+                  time.sleep(0.1)
+            vehicle.stop()
+            time.sleep(0.0125)
+     
+      elif(found==1):
+            threshold=20000
+            if(area < threshold):
+                  if(distanceC > 3):# and distanceR > 3 and distanceL > 3):
+                        #it brings coordinates of ball to center of camera's imaginary axis.
+                        if(centre_x<=20 or centre_x>=130):
+                              if(centre_x<20):
+                                    flag=0
+                                    vehicle.rightTurn()
+                                    if (centre_x < -10):
+                                          time.sleep(0.1)
+                                    time.sleep(0.05)
+                                    vehicle.stop()
+                                    time.sleep(0.01)
+                              elif(centre_x>130):
+                                    flag=1
+                                    vehicle.leftTurn()
+                                    if (centre_x > 160):
+                                          time.sleep(0.1)
+                                    time.sleep(0.05)
+                                    vehicle.stop()
+                                    time.sleep(0.01)
+                        else:
+                              vehicle.forward()
+                              time.sleep(0.1)
+                        time.sleep(0.01)
+                  else:
+                        vehicle.stop()
+                        time.sleep(0.01)
+
+            else:
+                  vehicle.backward()
+                  time.sleep(0.1)
+      cv2.imshow("draw",frame)  
+      
+      distance = min(min(distanceC, distanceL), distanceR)
+      if (found == 0):
+            distance = 0
+      draw(distance)  
+      
+      time.sleep(0.1)
+      if(cv2.waitKey(1) & 0xff == ord('q')):
+            break
+
+GPIO.cleanup() #free all the GPIO pins
+</pre>
+
+</td>
+<td style="vertical-align:top">
+
+<pre style="background:#f7f7f7; border:none">
+import Motor
+import RPi.GPIO as GPIO
+class VehicleMove:
+    def __init__(self):
+        self.leftMotor = Motor.Motor(15, 18)
+        self.rightMotor = Motor.Motor(21, 16)
+        
+    def forward(self):
+        print("forward")
+        self.rightMotor.forward()
+        self.leftMotor.forward()
+        
+    def backward(self):
+        print("backward")
+        self.rightMotor.backward()
+        self.leftMotor.backward()
+        
+    def rightTurn(self):
+        print("rightTurn")
+        self.rightMotor.backward()
+        self.leftMotor.forward()
+        
+    def leftTurn(self):
+        print("leftTurn")
+        self.rightMotor.forward()
+        self.leftMotor.backward()
+
+    def stop(self):
+        print("stop")
+        self.rightMotor.stop()
+        self.leftMotor.stop()
+</pre>
+
+</td>
+<td style="vertical-align:top">
+
+<pre style="background:#f7f7f7; border:none">
+import RPi.GPIO as GPIO
+class Motor:
+    def __init__(self, pinIn, pinOut):
+        self.pinIn = pinIn
+        self.pinOut = pinOut
+        
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(self.pinIn, GPIO.OUT)
+        GPIO.setup(self.pinOut, GPIO.OUT)
+    
+    def forward(self):
+        GPIO.output(self.pinIn, True)
+        GPIO.output(self.pinOut, False)
+        
+    def backward(self):
+        GPIO.output(self.pinIn, False)
+        GPIO.output(self.pinOut, True)
+        
+    def stop(self):
+        GPIO.output(self.pinIn, False)
+        GPIO.output(self.pinOut, False)
+</pre>
+
+</td>
+<td style="vertical-align:top">
+
+<pre style="background:#f7f7f7; border:none">
+import RPi.GPIO as GPIO
+import time
+class Sensor:
+	def __init__(self, trig, echo):
+		self.trig = trig
+		self.echo = echo
+		
+		GPIO.setmode(GPIO.BOARD)
+		GPIO.setup(self.trig, GPIO.OUT)
+		GPIO.setup(self.echo, GPIO.IN)
+		
+	def distance(self):
+		GPIO.output(self.trig, True)
+		time.sleep(0.00001)
+		GPIO.output(self.trig, False)
+		
+		startTime = time.time()
+		stopTime = time.time()
+		
+		while (GPIO.input(self.echo) == 0):
+			startTime = time.time()
+		
+		while (GPIO.input(self.echo) == 1):
+			stopTime = time.time()
+			
+		timeElapsed = stopTime - startTime
+		distance = (timeElapsed * 34300) /2
+		
+		return distance
+</pre>
+</td>
+</tr>
+</table>
+</pre>
 
 # Bill of Materials
 <!--Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
