@@ -887,7 +887,8 @@ while True:
             print(centre_x,centre_y)
       flag=0        
       if(found==0):
-            #if the ball is not found and the last time it sees ball in which direction, it will start to rotate in that direction
+            #if the ball is not found and the last time it sees ball 
+	    #in which direction, it will start to rotate in that direction
             if flag==0:
                   vehicle.rightTurn()
                   time.sleep(0.1)
