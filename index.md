@@ -6,6 +6,10 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 |:--:|:--:|:--:|:--:|
 | Nikolas M | Monta Vista High School | Computer Science | Incoming Senior
 
+| **Part** | **Note** | **Price** | **Link** |
+|:--:|:--:|:--:|:--:|
+| Vehicle Chassis | Contains all of the components | $13.59 | <a href="https://www.amazon.com/Smart-Chassis-Motors-Encoder-Battery/dp/B01LXY7CM3/ref=sr_1_3?crid=2PBUMRA558E78&keywords=motor+robot+car+kit&qid=1689879344&sprefix=motor+robot+car+kit%2Caps%2C183&sr=8-3"> Link </a> 
+
 <!--
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 -->
