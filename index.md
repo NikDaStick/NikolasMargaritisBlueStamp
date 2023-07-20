@@ -12,7 +12,7 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 <img align="left" src="Nikolas-Headshot.png" width="49%"/> 
 <img align="right" src="Nikolas-Project.png" width="49%"/> 
 
-<br>
+<br><br><br>
 # Demo Video
 <video align = "center" src="DemoVideo.mp4" controls muted width="99%"></video>
 <br>
