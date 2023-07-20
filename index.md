@@ -1049,17 +1049,17 @@ GPIO.cleanup() #free all the GPIO pins
 # Bill of Materials
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Vehicle Chassis | Contains all of the components | $13.59 | <a href="https://www.amazon.com/Smart-Chassis-Motors-Encoder-Battery/dp/B01LXY7CM3/ref=sr_1_3?crid=2PBUMRA558E78&keywords=motor+robot+car+kit&qid=1689879344&sprefix=motor+robot+car+kit%2Caps%2C183&sr=8-3"> Link </a> |
-|:--:|:--:|:--:|:--:|
+| Vehicle Chassis | Contains all of the components | $13.59 | <a href="https://www.amazon.com/Smart-Chassis-Motors-Encoder-Battery/dp/B01LXY7CM3/ref=sr_1_3?crid=2PBUMRA558E78&keywords=motor+robot+car+kit&qid=1689879344&sprefix=motor+robot+car+kit%2Caps%2C183&sr=8-3"> Link </a> 
+<!--|:--:|:--:|:--:|:--:|
 | Raspberry Pi 3 B+ | Computer to control camera, motors, and sensors | $86.99 | <a href="https://www.amazon.com/ELEMENT-Element14-Raspberry-Pi-Motherboard/dp/B07BDR5PDW/ref=sr_1_3?hvadid=557504887118&hvdev=c&hvlocphy=9032183&hvnetw=g&hvqmt=e&hvrand=9887483268924853306&hvtargid=kwd-296167057660&hydadcr=24333_13517641&keywords=raspberry+pi+3+b%2B&qid=1689879134&sr=8-3"> Link </a> |
 |:--:|:--:|:--:|:--:|
 | Motor Driver | Controls the motors | $6.99 | <a href="https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/ref=pd_bxgy_sccl_1/139-6805802-4393231?pd_rd_w=CE17H&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=7RQ4PEH4F0KYWPVE978G&pd_rd_wg=D45s5&pd_rd_r=efb16f33-ac59-4b6b-bc5c-b5ccbaa914ca&pd_rd_i=B014KMHSW6&psc=1"> Link </a> |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href=""> Link </a> |
+| Bread Board | Used for connections between wires and components  | $9.99 | <a href=""> Link </a> |
 |:--:|:--:|:--:|:--:|
 | Item Name | What the item is used for | $Price | <a href=""> Link </a> |
 |:--:|:--:|:--:|:--:|
 | Item Name | What the item is used for | $Price | <a href=""> Link </a> |
 |:--:|:--:|:--:|:--:|
 | Item Name | What the item is used for | $Price | <a href=""> Link </a> |
-|:--:|:--:|:--:|:--:|
+|:--:|:--:|:--:|:--:|-->
