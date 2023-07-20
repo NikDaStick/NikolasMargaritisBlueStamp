@@ -9,7 +9,8 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 <!--
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 -->
-<img align="center" src="Nikolas-Headshot.png" width="99%"/> 
+<img align="left" src="Nikolas-Headshot.png" width="49%"/> 
+<img align="right" src="Nikolas-Project.png" width="49%"/> 
 
 # Demo Video
 <video align = "center" src="DemoVideo.mp4" controls muted width="99%"></video>
@@ -727,9 +728,7 @@ My next steps are to start work on my intensive project which is a ball tracking
 
 <br><br><br>
 # Schematics 
-<!--
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
--->
+<img align="center" src="CircuitDiagram.png" width="99%"/>
 
 # Code
 <!--
