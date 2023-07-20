@@ -11,7 +11,7 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 -->
 <img align="left" src="Nikolas-Headshot.png" width="50%"/> 
 <img align="right" src="Nikolas-Project.png" width="50%"/> 
-<video align = "center" src="DemoVideo.mp4" controls muted width="99%"></video>
+<video align = "center" src="DemoVideo.mp4" controls muted width="100%"></video>
 <br><br><br>
 
   
@@ -1047,23 +1047,19 @@ GPIO.cleanup() #free all the GPIO pins
 </pre>
 
 # Bill of Materials
-<!--Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
-
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
+| Vehicle Chassis | TO contain all of the components | $13.59 | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/Smart-Chassis-Motors-Encoder-Battery/dp/B01LXY7CM3/ref=sr_1_3?crid=2PBUMRA558E78&keywords=motor+robot+car+kit&qid=1689879344&sprefix=motor+robot+car+kit%2Caps%2C183&sr=8-3)"> Link </a> |
+|:--:|:--:|:--:|:--:|
+| Raspberry Pi 3 B+ | Computer to control camera, motors, and sensors | $86.99 | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/ELEMENT-Element14-Raspberry-Pi-Motherboard/dp/B07BDR5PDW/ref=sr_1_3?hvadid=557504887118&hvdev=c&hvlocphy=9032183&hvnetw=g&hvqmt=e&hvrand=9887483268924853306&hvtargid=kwd-296167057660&hydadcr=24333_13517641&keywords=raspberry+pi+3+b%2B&qid=1689879134&sr=8-3)"> Link </a> |
+|:--:|:--:|:--:|:--:|
+| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+|:--:|:--:|:--:|:--:|
+| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+|:--:|:--:|:--:|:--:|
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 |:--:|:--:|:--:|:--:|
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 |:--:|:--:|:--:|:--:|
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 |:--:|:--:|:--:|:--:|
-
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
-
-To watch the BSE tutorial on how to create a portfolio, click here.
--->
