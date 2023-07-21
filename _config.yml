@@ -1,5 +1,7 @@
 remote_theme: daattali/beautiful-jekyll
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+- jekyll-remote-theme
+
+thumbnail-img: "FinalMilestoneFront.png"
 title: Ball Tracking Robot
 markdown: kramdown
