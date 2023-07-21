@@ -10,7 +10,7 @@
 <img align="center" src="Nikolas-Pictures.png" width="100%"/>  
 <br><br>
   
-# Final Milestone
+[Final Milestone](# Final Milestone)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oYmFFGpg1AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my final milestone, I added an on/off switch to turn on and off my motors and an LED matrix to display the distance in centimeters that the vehicle detects the ball.
