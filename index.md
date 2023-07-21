@@ -8,10 +8,10 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 
 <img align="left" src="Nikolas-Headshot.png" width="50%"/> 
 <img align="right" src="Nikolas-Project.png" width="50%"/> 
-<video align = "center" src="DemoVideo.mp4" controls muted width="100%"></video>
-<br><br><br>
+<br><br>
   
 # Final Milestone
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oYmFFGpg1AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my final milestone, I added an on/off switch to turn on and off my motors and an LED matrix to display the distance in centimeters that the vehicle detects the ball.
 
@@ -40,6 +40,10 @@ In my final milestone, I soldered all of the components to the circuit board. On
 ## Progress
 <img align="center" src="LED-matrix.png"/>
 My customization during this milestone was adding the on/off switch for the motors and the LED matrix to display the distance that the camera detects from the ball. I also 3D printed a raspberry pi camera case where the angle is able to be adjusted to point correctly towards the ball.
+
+<br>
+## Demo Video
+<video align = "center" src="DemoVideo.mp4" controls muted width="100%"></video>
 
 
 <br>
