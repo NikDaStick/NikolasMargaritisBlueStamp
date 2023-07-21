@@ -6,8 +6,7 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 |:--:|:--:|:--:|:--:|
 | Nikolas M | Monta Vista High School | Computer Science | Incoming Senior
 
-<img align="left" src="Nikolas-Headshot.png" width="50%"/> 
-<img align="right" src="Nikolas-Project.png" width="50%"/> 
+<img align="center" src="Nikolas.png" width="100%"/>  
 <br><br>
   
 # Final Milestone
