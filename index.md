@@ -1056,11 +1056,16 @@ GPIO.cleanup() #free all the GPIO pins
 |:--:|:--:|:--:|:--:|
 | Motor Driver | Controls the motors | $6.99 | <a href="https://www.amazon.com/Qunqi-Controller-Module-Stepper-Arduino/dp/B014KMHSW6/ref=pd_bxgy_sccl_1/139-6805802-4393231?pd_rd_w=CE17H&content-id=amzn1.sym.26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_p=26a5c67f-1a30-486b-bb90-b523ad38d5a0&pf_rd_r=7RQ4PEH4F0KYWPVE978G&pd_rd_wg=D45s5&pd_rd_r=efb16f33-ac59-4b6b-bc5c-b5ccbaa914ca&pd_rd_i=B014KMHSW6&psc=1"> Link </a> |
 |:--:|:--:|:--:|:--:|
-| Bread Board | Used for connections between wires and components  | $9.99 | <a href=""> Link </a> |
+| Bread Board | Used for connections between wires and components  | $9.99 | <a href="https://www.amazon.com/Breadboards-Solderless-Breadboard-Distribution-Connecting/dp/B07DL13RZH/ref=sxin_16_pa_sp_search_thematic_sspa?content-id=amzn1.sym.ade0d4f7-f545-4bff-a3c3-71bb70c3e6af%3Aamzn1.sym.ade0d4f7-f545-4bff-a3c3-71bb70c3e6af&crid=MBRA2PDRSF8R&cv_ct_cx=bread+board&keywords=bread+board&pd_rd_i=B07DL13RZH&pd_rd_r=f9fa7b17-c871-4ee4-878b-65616bdc16d2&pd_rd_w=vmCcS&pd_rd_wg=0eI9y&pf_rd_p=ade0d4f7-f545-4bff-a3c3-71bb70c3e6af&pf_rd_r=9K78AR4N2YQ6DMZHM1YB&qid=1689955022&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&sprefix=bread+boar%2Caps%2C326&sr=1-1-9cb21890-b538-4fe1-898e-473f8bb6c1fa-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9zZWFyY2hfdGhlbWF0aWM&psc=1"> Link </a> |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href=""> Link </a> |
+| Ultrasonic Sensors | Detects objects and distance by sending and recieving signals | $7.99 | <a href="https://www.amazon.com/Excelity-Ultrasonic-HC-SR04-Distance-Mounting/dp/B07SC1YJ21/ref=sr_1_1?crid=20KRPVQQ9MEG3&keywords=ultrasonic+sensor+3+pack&qid=1689955065&s=industrial&sprefix=ultrasonic+sensor+3+pac%2Cindustrial%2C138&sr=1-1"> Link </a> |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href=""> Link </a> |
+| Raspberry Pi Camera Module | Used to detect balls | $29.49 | <a href="https://www.amazon.com/Raspberry-Pi-Camera-Module-Megapixel/dp/B01ER2SKFS/ref=asc_df_B01ER2SKFS/?tag=hyprod-20&linkCode=df0&hvadid=309776868400&hvpos=&hvnetw=g&hvrand=8009257172531766884&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032131&hvtargid=pla-406302832745&psc=1"> Link </a> |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href=""> Link </a> |
+| LED Matrix | Used to display the ball's distance | $12.99 | <a href="https://www.amazon.com/ALAMSCN-MAX7219-Display-Raspberry-Microcontroller/dp/B08KS68GYZ/ref=sr_1_2?crid=3EB30WXSLEMJF&keywords=led+matrix+2+in+1&qid=1689955205&s=industrial&sprefix=led+matrix+2+in+%2Cindustrial%2C184&sr=1-2"> Link </a> |
 |:--:|:--:|:--:|:--:|
+| Portable Battery | Powers the Raspberry Pi | $21.98 | <a href="https://www.amazon.com/Anker-Ultra-Compact-High-Speed-VoltageBoost-Technology/dp/B07QXV6N1B/ref=sr_1_3?crid=K3WBISVMUX5Y&keywords=portable+battery&qid=1689955374&sprefix=portable+battery+%2Caps%2C288&sr=8-3"> Link </a> |
+|:--:|:--:|:--:|:--:|
+| AA Battery Holder | Powers the motors | $5.99 | <a href="https://www.amazon.com/Corpco-Battery-Holder-Standard-Connector/dp/B07SRDPZ9Z/ref=sr_1_3?crid=3QX0QP851SBM9&keywords=aa+battery+holder+6&qid=1689955447&sprefix=aa+battery+holder+6%2Caps%2C208&sr=8-3"> Link </a> |
+|:--:|:--:|:--:|:--:|
+| Jumper Wires | Used to connect components together | $6.99 | <a href="https://www.amazon.com/EDGELEC-Breadboard-Optional-Assorted-Multicolored/dp/B07GD2BWPY/ref=sr_1_3?crid=3M1BE12B43JVB&keywords=jumper%2Bwires&qid=1689955480&sprefix=jumper%2Bwire%2Caps%2C201&sr=8-3&th=1"> Link </a> |
