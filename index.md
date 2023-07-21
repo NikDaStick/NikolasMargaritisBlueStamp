@@ -3,8 +3,6 @@
 ### A robot that uses computer vision through the camera and sensors to track and move towards a ball. 
 <br>
 
-[Final Milestone](# Final Milestone)
-
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Nikolas M | Monta Vista High School | Computer Science | Incoming Senior
