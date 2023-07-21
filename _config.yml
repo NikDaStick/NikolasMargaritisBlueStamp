@@ -2,7 +2,16 @@
 remote_theme: daattali/beautiful-jekyll
 plugins:
 - jekyll-remote-theme
+
 avatar: "Avatar.png"
 title: Ball Tracking Robot
+
+navbar-links:
+  About Me: "aboutme"
+  Resources:
+    - Beautiful Jekyll: "https://beautifuljekyll.com"
+    - Learn markdown: "https://www.markdowntutorial.com/"
+  Author's home: "https://deanattali.com"
+  
 markdown: kramdown
 ---
