@@ -4,6 +4,9 @@ plugins:
 
 avatar: "Avatar.png"
 title: Ball Tracking Robot
-tags: [Final Milestone]
+output:
+  flexdashboard::flex_dashboard:
+    navbar:
+      - { icon: "fa-question-circle", href: "https://google.com", align: right }
 subtitle: A robot that uses computer vision through the camera and sensors to track and move towards a ball.
 markdown: kramdown
