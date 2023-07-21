@@ -276,7 +276,7 @@ Included componenets:
   - Resistors                 > Resists the electrical current
 </pre>
 
-<img src="Milestone2Front.png" width="45%"/> <img src="Milestone2Side.png" width="45%"/> 
+<img align="center" src="Milestone2.png" width="100%"/> 
 
 In my second milestone, I added a voltage divider for each of the ultrasonic sensors in order to send only 3.3 volts back to the raspberry pi GPIO pin from the echo pin on the sensor. In my voltage divider I used two resistors, a 1k Ohm resistor above the output wire and a 2k Ohm resistor below the output wire. The 2k Ohm resistor below the wire is connected to ground and the echo pin provides current to the 1k Ohm resistor, thus creating the circuit.
 
@@ -557,7 +557,7 @@ Included componenets:
   - Wires                     > Provide connection between all components
 </pre>
 
-<img src="Milestone1Top.png" width="320"/> <img src="Milestone1Side.png" width="410"/> 
+<img align="center" src="Milestone1.png" width="100%"/> 
 <img align="right" src="Milestone1Front.png" width="50%"/>
 
 These components work together by being connected through the raspberry pi, circuit board, and dc stepper motor driver. The portable battery provides power to the raspberry pi and the raspberry pi and external batteries provide power to the dc stepper motor driver. The raspberry pi also is connected to the dc stepper motor driver with 4 GPIO pins which can be programmed to make specific motors move. The dc stepper motor driver provides output cables to the two motors. The raspberry pi also provides power through the circuit board to the 3 ultrasonic sensors. In addition to this, 2 GPIO pins from the raspberry pi (in and out) are connected to each ultrasonic sensor to control it. Finally, the camera is connected to the raspberry pi through the camera slot.
