@@ -2,6 +2,6 @@ remote_theme: daattali/beautiful-jekyll
 plugins:
 - jekyll-remote-theme
 
-thumbnail-img: "FinalMilestoneFront.png"
+avatar: "FinalMilestoneFront.png"
 title: Ball Tracking Robot
 markdown: kramdown
