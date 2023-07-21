@@ -4,5 +4,6 @@ plugins:
 
 avatar: "Avatar.png"
 title: Ball Tracking Robot
+tags: [Final Milestone]
 subtitle: A robot that uses computer vision through the camera and sensors to track and move towards a ball.
 markdown: kramdown
