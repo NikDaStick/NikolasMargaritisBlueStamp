@@ -1,7 +1,6 @@
 <br>
 # Ball Tracking Robot
 ### A robot that uses computer vision through the camera and sensors to track and move towards a ball. 
-<br>
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
