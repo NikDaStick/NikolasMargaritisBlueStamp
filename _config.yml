@@ -6,7 +6,7 @@ plugins:
 avatar: "Avatar.png"
 title: Ball Tracking Robot
 author: Nikolas Margaritis
-excerpt_length: 50
+full-width: true
 
 navbar-links:
   Home: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/"
