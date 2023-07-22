@@ -7,10 +7,12 @@ avatar: "Avatar.png"
 title: Ball Tracking Robot
 
 navbar-links:
-  Final Milestone: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Final%20Milestone"
-  Second Milestone: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Second%20Milestone"
-  First Milestone: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#First%20Milestone"
-  Starter Project: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Starter%20Project"
+  Milestones:
+    - Final Milestone: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Final%20Milestone"
+    - Second Milestone: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Second%20Milestone"
+    - First Milestone: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#First%20Milestone"
+    - Starter Project: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Starter%20Project"
+  Demo: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Demo"
   Schematics: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Schematics"
   Code: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Code"
   BOM: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#BOM"
