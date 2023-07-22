@@ -12,11 +12,21 @@
 
 </center>
 
+<center>
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+
+</center>
+
 <img align="center" src="Nikolas-Pictures.png" width="100%"/>  
 <br><br>
 
 <h1 id="Final Milestone">Final Milestone</h1>
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/oYmFFGpg1AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oYmFFGpg1AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my final milestone, I added an on/off switch to turn on and off my motors and an LED matrix to display the distance in centimeters that the vehicle detects the ball.
 
@@ -257,7 +267,7 @@ GPIO.cleanup() #free all the GPIO pins
 
 <br><br><br>
 <h1 id="Second Milestone">Second Milestone</h1>
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ot4ZATjNglQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ot4ZATjNglQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my second milestone, I coded the ball tracking component of the robot.
 
@@ -539,7 +549,7 @@ cv2.destroyAllWindows()
 
 <br><br><br>
 <h1 id="First Milestone">First Milestone</h1>
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/XBj6bCdopuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XBj6bCdopuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my first milestone, I created the shell of the robot without the ball tracking component. 
 
@@ -698,7 +708,7 @@ For your first milestone, describe what your project is and how you plan to buil
 
 <br><br><br>
 <h1 id="Starter Project">Starter Project</h1>
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/p0D7MX5DmcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p0D7MX5DmcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my starter project, I created a useless box that flicks a lever off after it is flicked on. This is done by a motor that is attached to an arm in the machine that activates when a lever is flicked on. In addition to this, there is also an LED hooked up to the circuit which turns green when the arm is starting to flick the lever back and turns red after the arm has flicked the lever. 
 
