@@ -11,8 +11,7 @@ A robot that uses computer vision through the camera and sensors to track and mo
 <img align="center" src="Nikolas-Pictures.png" width="100%"/>  
 <br><br>
 
-<p id="Final Milestone">Final Milestone</p>
-# Final Milestone
+<h1 id="Final Milestone">Final Milestone</h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oYmFFGpg1AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my final milestone, I added an on/off switch to turn on and off my motors and an LED matrix to display the distance in centimeters that the vehicle detects the ball.
@@ -258,7 +257,7 @@ GPIO.cleanup() #free all the GPIO pins
 </pre>
 
 <br><br><br>
-# Second Milestone
+<h1 id="Second Milestone">Second Milestone</h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ot4ZATjNglQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my second milestone, I coded the ball tracking component of the robot.
@@ -540,7 +539,7 @@ cv2.destroyAllWindows()
 </pre>
 
 <br><br><br>
-# First Milestone
+<h1 id="First Milestone">First Milestone</h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XBj6bCdopuY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my first milestone, I created the shell of the robot without the ball tracking component. 
@@ -699,7 +698,7 @@ For your first milestone, describe what your project is and how you plan to buil
 -->
 
 <br><br><br>
-# Starter Project - Useless Box
+<h1 id="Starter Project">Starter Project</h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/p0D7MX5DmcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
 As my starter project, I created a useless box that flicks a lever off after it is flicked on. This is done by a motor that is attached to an arm in the machine that activates when a lever is flicked on. In addition to this, there is also an LED hooked up to the circuit which turns green when the arm is starting to flick the lever back and turns red after the arm has flicked the lever. 
@@ -728,11 +727,11 @@ I encountered a challenge with the self-tapping screws (meaning that the screw c
 My next steps are to start work on my intensive project which is a ball tracking robot. I plan to start this project and apply the knowledge of soldering I learnt from the starter project to the ball tracking robot.
 
 <br><br><br>
-# Schematics 
+<h1 id="Schematics">Schematics</h1>
 <img align="center" src="CircuitDiagram.png" width="99%"/>
 
 <br><br><br>
-# Full Code
+<h1 id="Code">Full Code</h1>
 <a href="BallTrackingRobot.zip" download>Click to Download</a>
 <pre style="background:#fdfdfd; border:none; height:40pc">
 <table>
@@ -1049,7 +1048,7 @@ GPIO.cleanup() #free all the GPIO pins
 </pre>
 
 <br><br><br>
-# Bill of Materials
+<h1 id="BOM">Bill Of Materials</h1>
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
