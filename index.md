@@ -572,7 +572,7 @@ My next steps are to implement the ball tracking mechanism of the robot and move
 
 <br>
 ## Code
-<pre style="background:#fdfdfd; border:none; height:40pc" width="100%">
+<pre style="background:#fdfdfd; border:none; height:40pc" width="150%">
 <table>
 <tr>
 <th> Main.py </th>
