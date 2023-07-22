@@ -723,7 +723,7 @@ My next steps are to start work on my intensive project which is a ball tracking
 
 <br><br><br>
 <h1 id="Demo">Demo</h1>
-<video align = "center" src="Demo.mp4" width="100%"></video>
+<video align = "center" src="Demo.mp4" controls width="100%"></video>
 
 <br><br><br>
 <h1 id="Schematics">Schematics</h1>
