@@ -43,11 +43,6 @@ In my final milestone, I soldered all of the components to the circuit board. On
 My customization during this milestone was adding the on/off switch for the motors and the LED matrix to display the distance that the camera detects from the ball. I also 3D printed a raspberry pi camera case where the angle is able to be adjusted to point correctly towards the ball.
 
 <br>
-## Demo Video
-<video align = "center" src="DemoVideo.mp4" controls muted width="100%"></video>
-
-
-<br>
 ## Challenges
 A challenge I faced when creating this robot was getting a component to display the distance that the camera detected the ball, whether it was an lcd screen, oled screen, or LED matrix. At first I tried to get the lcd and oled screen to work, however, I was unable to detect the address of each of the screens through the I2C connection in order to control it. In the end I wasn't able to figure out why the raspberry pi could not detect the components so I decided to use an SPI connection with an LED matrix to display the distance. To control the LED matrix, I used the luma library which was able to draw numbers and text by turning on individual LEDs.
 <br><br>
@@ -725,6 +720,10 @@ I encountered a challenge with the self-tapping screws (meaning that the screw c
 <br>
 ## Next Steps
 My next steps are to start work on my intensive project which is a ball tracking robot. I plan to start this project and apply the knowledge of soldering I learnt from the starter project to the ball tracking robot.
+
+<br><br><br>
+<h1 id="Demo">Demo</h1>
+<video align = "center" src="DemoVideo.mp4" controls muted width="100%"></video>
 
 <br><br><br>
 <h1 id="Schematics">Schematics</h1>
