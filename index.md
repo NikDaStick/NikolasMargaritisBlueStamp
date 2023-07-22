@@ -4,23 +4,9 @@
 <p align="center">A robot that uses computer vision through the camera and sensors to track and move towards a ball.</p> 
 <br><br>
 
-<center>
-	
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Nikolas M | Monta Vista High School | Computer Science | Incoming Senior
-
-</center>
-
-<center>
-
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
-
-</center>
 
 <img align="center" src="Nikolas-Pictures.png" width="100%"/>  
 <br><br>
