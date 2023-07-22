@@ -1,6 +1,6 @@
 <br>
 <h3 align="center">Ball Tracking Robot</h3>
-<hr style="border: 2pc solid black; border-radius: 1pc; size: 2pc" width="50%" align="center">
+<hr style="border: 2px solid black; border-radius: 2px; size: 1px" width="50%" align="center">
 <p align="center">A robot that uses computer vision through the camera and sensors to track and move towards a ball.</p> 
 <br><br>
 
