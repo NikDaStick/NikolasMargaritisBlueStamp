@@ -5,9 +5,11 @@
 <br><br>
 
 <center>
+	
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Nikolas M | Monta Vista High School | Computer Science | Incoming Senior
+
 </center>
 
 <img align="center" src="Nikolas-Pictures.png" width="100%"/>  
