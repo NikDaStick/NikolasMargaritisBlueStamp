@@ -725,7 +725,7 @@ My next steps are to start work on my intensive project which is a ball tracking
 <h1 id="Demo">Demo</h1>
 <video align = "center" src="DemoVideo.mp4" controls muted width="100%"></video>
 
-<br><br><br><br>
+<br><br><br>
 <h1 id="Schematics">Schematics</h1>
 <img align="center" src="CircuitDiagram.png" width="99%"/>
 
