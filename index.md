@@ -2,6 +2,7 @@
 ### Ball Tracking Robot
 A robot that uses computer vision through the camera and sensors to track and move towards a ball. 
 <br><br>
+<a href="#Final Milestone">Take me to the opening paragraph.</a>
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -10,6 +11,7 @@ A robot that uses computer vision through the camera and sensors to track and mo
 <img align="center" src="Nikolas-Pictures.png" width="100%"/>  
 <br><br>
 
+<p id="Final Milestone">Final Milestone</p>
 # Final Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oYmFFGpg1AQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ## Summary
