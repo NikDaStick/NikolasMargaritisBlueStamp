@@ -8,10 +8,12 @@ title: Ball Tracking Robot
 
 navbar-links:
   Final Milestone: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Final%20Milestone"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Second Milestone: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Second%20Milestone"
+  First Milestone: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#First%20Milestone"
+  Starter Project: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Starter%20Project"
+  Schematics: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Schematics"
+  Code: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#Code"
+  BOM: "https://nikdastick.github.io/NikolasMargaritisBlueStamp/#BOM"
   
 markdown: kramdown
 ---
